@@ -20,6 +20,14 @@ def instance_api():
     @api.route("/predict", methods=["GET"])
     def predict():
         # TODO: Add an endpoint to return the model's prediction.
-        return jsonify(message="La predicción podría ir en este endpoint!")
+        return jsonify(message="La prediccion podria ir en este endpoint!")
 
     return api
+
+
+if __name__ == "__main__":
+    api = instance_api()
+    api.run(host="0.0.0.0", port="8080", debug=True, use_reloader=True)
+
+
+

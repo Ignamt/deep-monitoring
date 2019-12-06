@@ -3,8 +3,7 @@ from setuptools import setup, find_packages
 
 required_modules = [
     "flask",
-    "gunicorn",
-    "keras"]
+    "gunicorn"]
 
 setup(name="deep-monitoring",
       version="0.0.1",

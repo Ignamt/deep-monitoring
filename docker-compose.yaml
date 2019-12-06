@@ -1,12 +1,16 @@
+version: "3.7"
+
 services:
   api:
     restart: on-failure
-    image: python:3.8
+    image: python:3.7.4
     working_dir: /var/sources/
     volumes:
-      - ./: /var/sources/.
+      - ~/digital_house/deep-monitoring/:/var/sources/
     environment:
       - ENV=DEV
+      - MODELS_PATH="/var/sources/iris/models"
     ports:
-      -8080:8080
-    command: ["gunicorn", "--config", "gunicorn.conf.py"]
+      - 8080:8080
+    command: ["bash", "start.sh"]
+

@@ -10,4 +10,4 @@ RUN pip install -U pip setuptools; \
 
 EXPOSE 8080
 
-CMD ["gunicorn", "--config", "gunciorn_conf.py", "app.api:instance_api()"]
+CMD ["gunicorn", "--config", "gunicorn.conf.py", "app.api:instance_api()"]
